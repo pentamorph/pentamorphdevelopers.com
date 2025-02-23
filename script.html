@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentamoorph Design & Developers</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            height: 60px; /* Adjust the height as needed */
+            width: auto; /* Maintain aspect ratio */
+            margin-right: 15px; /* Space between logo and company name */
+        }
+
+        .company-name h1 {
+            margin: 0;
+            font-size: 2rem; /* Adjust the font size as needed */
+        }
+
+        .company-name p {
+            margin: 0;
+            font-size: 1rem; /* Adjust the font size as needed */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(85, 85, 85, 0.8);
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background: rgba(119, 119, 119, 0.8);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .service-box {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 30%;
+        }
+
+        .portfolio {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .portfolio img {
+            width: 30%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .contact-form button {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #555;
+        }
+
+        footer {
+            background: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .services,
+            .portfolio {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-box,
+            .portfolio img {
+                width: 80%;
+                margin: 10px 0;
+            }
+
+            .contact-form {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Company Logo" class="logo">
+            <div class="company-name">
+                <h1>Pentamoorph Design & Developers</h1>
+                <p>Building a Better Future</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container" id="about">
+        <h2>About Us</h2>
+        <p>We are a leading construction company delivering high-quality projects worldwide.</p>
+    </div>
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3><a href="residential.html">Residential Construction</a></h3>
+                <p>We build beautiful and durable homes.</p>
+            </div>
+            <div class="service-box">
+                <h3><a href="commercial.html">Commercial Buildings</a></h3>
+                <p>We construct offices, malls, and business spaces.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="portfolio">
+        <h2>Our Portfolio</h2>
+        <h3>Completed Projects</h3>
+        <div class="portfolio">
+            <img src="images/completed1.jpg" alt="Completed Project 1">
+            <img src="images/completed2.jpg" alt="Completed Project 2">
+            <img src="images/completed3.jpg" alt="Completed Project 3">
+        </div>
+        <h3>Ongoing Projects</h3>
+        <div class="portfolio">
+            <img src="images/ongoing1.jpg" alt="Ongoing Project 1">
+            <img src="images/ongoing2.jpg" alt="Ongoing Project 2">
+            <img src="images/ongoing3.jpg" alt="Ongoing Project 3">
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Email: pentamorph2017@gmail.com | Phone: +91 9995218590</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 Pentamoorph Design & Developers. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
